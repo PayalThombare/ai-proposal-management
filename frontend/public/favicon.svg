@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#1A0533"/>
+      <stop offset="100%" stop-color="#06000F"/>
+    </radialGradient>
+    <radialGradient id="orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#7C3AED" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4C1D95" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="48" height="48" rx="11" fill="url(#bg)"/>
+  <!-- Soft orb glow -->
+  <ellipse cx="30" cy="14" rx="14" ry="14" fill="url(#orb)" opacity="0.6"/>
+  <!-- Document body -->
+  <rect x="9" y="14" width="22" height="27" rx="3" fill="none" stroke="#7C3AED" stroke-width="1.2"/>
+  <!-- Folded corner -->
+  <path d="M24 14 L31 14 L31 21 Z" fill="#4C1D95" opacity="0.5"/>
+  <path d="M24 14 L24 21 L31 21" fill="none" stroke="#A78BFA" stroke-width="1"/>
+  <!-- Neural lines on doc -->
+  <line x1="13" y1="22" x2="27" y2="22" stroke="#6D28D9" stroke-width="0.8" opacity="0.8"/>
+  <line x1="13" y1="25.5" x2="24" y2="25.5" stroke="#6D28D9" stroke-width="0.8" opacity="0.6"/>
+  <line x1="13" y1="29" x2="26" y2="29" stroke="#6D28D9" stroke-width="0.8" opacity="0.5"/>
+  <!-- AI node -->
+  <polygon points="37,9 40,14 37,19 32,19 29,14 32,9" fill="#0D001F" stroke="#C084FC" stroke-width="1.2" filter="url(#glow)"/>
+  <!-- Node center pulse -->
+  <circle cx="34.5" cy="14" r="2.5" fill="#E879F9" opacity="0.9" filter="url(#glow)"/>
+  <!-- Connector line from node to doc -->
+  <line x1="29" y1="14" x2="24" y2="17" stroke="#A78BFA" stroke-width="0.8" stroke-dasharray="2,1" opacity="0.7"/>
+</svg>
